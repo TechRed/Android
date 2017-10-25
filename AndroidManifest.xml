@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tn.kvj.powermanager">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Include required permissions for Google Mobile Ads to run. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".dashboard.Dashboard"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".about.About"
+            android:label="@string/action_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".device.CreateNewDevice"
+            android:label="@string/create_device"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".device.DeviceDetails"
+            android:label="@string/title_activity_device_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".device.UpdateDevice"
+            android:label="@string/title_activity_update_device"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chart.Chart"
+            android:label="DevicePowerChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".device.OptionMenu"
+            android:label="DevicePowerChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".device.DeviceMenu"
+            android:label="DevicePowerChart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".dashboard.Money" />
+        <activity
+            android:name=".about.Help"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+    </application>
+
+</manifest>
